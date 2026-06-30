@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Notes</h1>
+    <span id="connection-status">Connecting…</span>
+  </header>
+
+  <form id="create-form">
+    <input id="new-title" type="text" placeholder="Title" maxlength="120">
+    <textarea id="new-content" placeholder="Write a note…" rows="2"></textarea>
+    <button type="submit">Add Note</button>
+  </form>
+
+  <div id="notes-list"></div>
+
+  <div id="toast"></div>
+
+  <!-- UMD build exposes a global `supabase` object -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+ 
