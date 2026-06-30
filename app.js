@@ -4,8 +4,8 @@
    key is safe to expose client-side — RLS policies (schema.sql)
    define what it's actually allowed to do.
    ============================================================ */
-const SUPABASE_URL = 'https://YOUR-PROJECT.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR-ANON-PUBLIC-KEY';
+const SUPABASE_URL = 'https://dmanvzyhubxugkchrifl.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_yi-t7f4kUKF_YVQFZiGPEw_IAItvVZe';
 
 const db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
