@@ -1,0 +1,100 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #f7f7f8;
+  color: #1d1d1f;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+#connection-status {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+#create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+input, textarea {
+  font: inherit;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  width: 100%;
+}
+
+button {
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button.danger { background: #dc2626; }
+
+#notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.note-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.note-card h3 { margin: 0 0 0.25rem; }
+.note-card p { margin: 0 0 0.5rem; white-space: pre-wrap; color: #374151; }
+.note-card small { color: #9ca3af; }
+
+.note-card .actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.note-card.editing input,
+.note-card.editing textarea {
+  margin-bottom: 0.5rem;
+}
+
+#toast {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: #1d1d1f;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  max-width: 90%;
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+}
+
+#toast.visible {
+  transform: translateX(-50%) translateY(0);
+}
